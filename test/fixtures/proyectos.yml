@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  fechaEntrega: 2014-09-09
+
+two:
+  nombre: MyString
+  fechaEntrega: 2014-09-09
