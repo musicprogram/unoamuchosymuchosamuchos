@@ -1,0 +1,12 @@
+<div class="field">
+  <%= f.label :nombre, 'Nombre de la tarea' %><br>
+  <%= f.text_field :nombre %>
+</div>
+<div class="field">
+  <%= f.label :prioridad %><br>
+  <%= f.text_field :prioridad %>
+</div>
+<div class="field">
+  <%= f.collection_check_boxes :empleado_ids, Empleado.all, :id, :nombreCompleto %>
+</div>
+<%= f.link_to_remove "Eliminar esta tarea" %>

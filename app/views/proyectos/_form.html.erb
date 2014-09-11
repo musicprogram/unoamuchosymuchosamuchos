@@ -20,20 +20,13 @@
     <%= f.label :fechaEntrega %><br>
     <%= f.date_select :fechaEntrega %>
   </div>
+  
   <fieldset id="tareas">
-    <%= f.fields_for :tareas do |tareas_form| %>
-      <div class="field">
-        <%= tareas_form.label :nombre, 'Nombre de la tarea' %><br>
-        <%= tareas_form.text_field :nombre %>
-      </div>
-      <div class="field">      
-        <%= tareas_form.label :prioridad %><br>
-        <%= tareas_form.text_field :prioridad %>
-      </div>
-      <%= tareas_form.link_to_remove "Eliminar esta tarea" %>
-    <% end %>
-    <p><%= f.link_to_add "Agregar una tarea", :tareas %></p>
+      <%= f.fields_for :tareas %>
+      <p><%= f.link_to_add "Agregar una tarea", :tareas %></p>
   </fieldset>
+   
+  
   <div class="actions">
     <%= f.submit %>
   </div>

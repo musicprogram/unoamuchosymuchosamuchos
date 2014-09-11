@@ -10,5 +10,16 @@
   <%= @proyecto.fechaEntrega %>
 </p>
 
+<p>
+  <strong>Tareas:</strong>
+  <p>
+    <% @proyecto.tareas.each do |tarea| %>
+      Nombre: <%= tarea.nombre %><br/>
+      Prioridad: <%= tarea.prioridad %>
+      <hr/>
+    <% end %>
+  </p>
+</p>
+
 <%= link_to 'Edit', edit_proyecto_path(@proyecto) %> |
 <%= link_to 'Back', proyectos_path %>
